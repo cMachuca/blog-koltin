@@ -16,8 +16,7 @@ class BlogHeader extends Component
         public string $header,
         public ?string $subheading = null,
         public ?User $user = null
-    )
-    {
+    ) {
     }
 
     /**

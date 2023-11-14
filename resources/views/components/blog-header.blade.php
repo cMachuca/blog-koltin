@@ -5,9 +5,9 @@
                 <div class="site-heading">
                     <h1>{{ $header }}</h1>
                     <span class="subheading">{{ $subHeading ?? '' }}</span>
-{{--                    @if($user !== null)--}}
+                    @isset($records)
                         <span class="meta">Posted by <a href="{{ route('author', $user->slug_name) }}">{{$user->name ?? 'Anonymous' }}</a></span>
-{{--                    @endif--}}
+                    @endisset
 
                 </div>
             </div>
