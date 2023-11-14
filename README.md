@@ -3,7 +3,7 @@
 **Tabla de contenido:**
  - [Caso práctico](#use-case)
  - [Desing doc](#design-doc)
- - [Conclusiones](#conclutions)
+ - [Conclusiones](#conclusions)
 
 ## Notas:
 
@@ -65,8 +65,28 @@ Nos gusta que nos den este tipo de feedback ya que nos ayuda a valorar mejor y d
 <a id="design-doc"></a>
 ## Design Doc:
 
+We are creating a simple blog, this doesn't manage media and is using a clean blog from bootstrap templates.
+![image](https://github.com/cMachuca/blog-koltin/assets/1843597/29ccd5bb-2685-4700-92bf-c70885165f74)
 
+### Web Routes
+These routes are public so anybody can access them, and see the blog posts
 
-<a id="conclutions"></a>
+| Route Name | Route Path |
+| -------- | ------------- |
+| index | / |
+| single-post | /posts/{slug} |
+| authors | /authors/{slugName} |
+
+### API Endpoints
+These routes are protected do you need to register a user and generate a personal token, you can see the entire documentation in my [Postman profile](https://documenter.getpostman.com/view/5449563/2s9YXmY11X)
+
+| Method | Route Name | Route Path |
+|-----| -------- | --------- |
+|POST| Create Post | /api/v1/posts |
+|GET| Get Posts | /api/v1/posts |
+|POST| Create Authors | /api/v1/authors |
+|GET| Get Authors | /api/v1/authors |
+
+<a id="conclusions"></a>
 ## Conclusiones:
 
