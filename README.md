@@ -68,8 +68,28 @@ Nos gusta que nos den este tipo de feedback ya que nos ayuda a valorar mejor y d
 We are creating a simple blog, this doesn't manage media and is using a clean blog from bootstrap templates.
 ![image](https://github.com/cMachuca/blog-koltin/assets/1843597/29ccd5bb-2685-4700-92bf-c70885165f74)
 
+### Stack
+All the project was completed with PHP (Laravel 10) + MySQL for my local environment I use Valet.
+
+- PHP 8.2
+- Laravel 10
+- MySQL 8
+- Google Console
+
+### Development stack
+- valet
+- phpstan
+- php-cs-fixer
+- PHPUnit
+- ngrok
+
+### Laravel packages
+- sanctum
+- breeze
+- [laravel-google-sheets](https://github.com/kawax/laravel-google-sheets)
+
 ### Web Routes
-These routes are public so anybody can access them, and see the blog posts
+These routes are public so anybody can access them, and see the blog posts.
 
 | Route Name | Route Path |
 | -------- | ------------- |
@@ -78,7 +98,8 @@ These routes are public so anybody can access them, and see the blog posts
 | authors | /authors/{slugName} |
 
 ### API Endpoints
-These routes are protected do you need to register a user and generate a personal token, you can see the entire documentation in my [Postman profile](https://documenter.getpostman.com/view/5449563/2s9YXmY11X)
+These routes are protected do you need to register a user and generate a personal token from the web form (register/login go to Profile -> Personal Access Token) 
+You can see the entire documentation in my [Postman profile](https://documenter.getpostman.com/view/5449563/2s9YXmY11X)
 
 | Method | Route Name | Route Path |
 |-----| -------- | --------- |
@@ -89,4 +110,17 @@ These routes are protected do you need to register a user and generate a persona
 
 <a id="conclusions"></a>
 ## Conclusiones:
+I enjoy creating projects from scratch but most of the time take a long time to upsert all the project depending on the requirements in this case was as simple as php/mysql/nginx fortunately cache driver and queues were not necessary for this small project. 
+It was difficult for me not to focus on the frontend... Its an area of opportunity for me since I was working entirely in backend for around 3 years.
 
+### My tech debt
+I implemented a couple of tries and catches, and also I recycled some code for registering a user to meet with Single responsibility principle.
+However, I would have liked to have had time to apply the repository pattern since another of the things that consumed my time was making the connection to Google Sheets
+If I can make a list of the missing things I would like to use in this project it should be.
+
+- More validation in all the cases web/API
+- Repository Pattern
+- DTOs
+- Laravel Passport (oAuth) for the API
+
+Thank you for this challenge.
