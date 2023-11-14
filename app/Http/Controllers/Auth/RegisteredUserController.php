@@ -39,11 +39,13 @@ class RegisteredUserController extends Controller
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
-        $registerUser->__invoke([
+        $user = $registerUser->__invoke([
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => $request->get('password'),
         ]);
+
+        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }

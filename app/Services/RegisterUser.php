@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 class RegisterUser
 {
     /**
-     * @param array $userData <string>
+     * @param array $userData
      * @return User
      */
     public function __invoke(array $userData): User
@@ -24,8 +24,6 @@ class RegisterUser
         ]);
 
         event(new Registered($user));
-
-        Auth::guard('web')->login($user);
 
         return $user;
     }
